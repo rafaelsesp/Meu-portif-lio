@@ -5,8 +5,29 @@
   box-sizing: border-box; 
 }
 
+/*Raiz*/:root{
+    /*iniciando variáveis*/
+    --word-color: white;
+    --bg-mode: url(../assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --hightlight-color: rgba(255, 255, 255, 0.2);
+
+}
+
+/*light mode*/
+.light{
+    --word-color: black;
+    --bg-mode: url(../assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --hightlight-color: rgba(0, 0, 0, 0.1);
+}
+
 body{
-    background-image: url(../assets/bg-mobile.jpg);
+    background-image: var(--bg-mode);
     background-repeat: no-repeat;
     background-position:top center;
     background-size: cover;
@@ -14,7 +35,7 @@ body{
 
 body *{
     font-family: 'Inter', sans-serif;
-    color:white;
+    color:var(--word-color);
 }
 #container{
     border: 3px solid yellow;
@@ -60,8 +81,8 @@ ul li a{
 
     padding: 16px 24px;
 
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
     border-radius: 8px;
 
     backdrop-filter: blur(4px);
@@ -74,8 +95,8 @@ ul li a{
 }
 
 ul li a:hover{ /* pseudo-selector*/
-    background: rgba(255, 255, 255, 0.05);
-    border: 1.5px solid white;
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--word-color);
 }
 
 /* Icons*/
@@ -98,7 +119,7 @@ ul li a:hover{ /* pseudo-selector*/
 }
 
 #social_links a:hover{
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--hightlight-color);
 }
 
 /* Footer */
