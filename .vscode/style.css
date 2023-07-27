@@ -17,9 +17,10 @@ body *{
     color:white;
 }
 #container{
-    width: 360px;
     border: 3px solid yellow;
+    width: 360px;
     margin: 56px auto 0px;
+    padding: 0px 24px;
 }
 
 /*profile*/
@@ -47,6 +48,8 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    padding: 24px 0;
 }
 
 
@@ -70,8 +73,30 @@ ul li a{
     transition: background 0.2s;
 }
 
-/* pseudo-selector*/
-ul li a:hover{
+ul li a:hover{ /* pseudo-selector*/
     background: rgba(255, 255, 255, 0.05);
     border: 1.5px solid white;
+}
+
+/* Icons*/
+#social_links {
+    display: flex;
+    padding: 24px 0;
+    font-size: 24px;
+
+    justify-content: center;
+}
+
+#social_links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+#social_links a:hover{
+    background: rgba(255, 255, 255, 0.05);
 }
