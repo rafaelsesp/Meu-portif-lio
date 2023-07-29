@@ -39,7 +39,6 @@ body *{
     color:var(--word-color);
 }
 #container{
-    border: 3px solid yellow;
     width: 360px;
     margin: 56px auto 0px;
     padding: 0px 24px;
@@ -54,7 +53,7 @@ body *{
     width: 112px;
     height: 112px;
     border-radius: 50%;
-    border: solid rgba(255, 255, 255, 0.6);
+    border: solid var(--stroke-color);
 }
 
 #profile p{
@@ -80,9 +79,14 @@ margin-top: 8px;
 
     position: absolute;
     top: 50%;
-    right: 0;
+    left: 0;
     z-index: 1;
     transform: translateY(-50%);
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
 }
 
 #switch span{
