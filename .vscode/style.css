@@ -92,8 +92,8 @@ margin-top: 8px;
     animation: slide-go 0.2s forwards;
 }
 
-#swotch button :hover{
-    outline: 8px solid var(--hightlight-color);
+#switch button:hover{
+    outline: 8px solid var(--hightlight-color);                                          ;
 }
 
 #switch span{
